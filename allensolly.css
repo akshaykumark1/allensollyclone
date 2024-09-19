@@ -11,6 +11,16 @@ header{
     display: block;
     background-color: #333;
     color: white;
+    padding: 10px;
+}
+header select{
+    background-color: #333;
+    color: white;
+    border: none;
+}
+.address{
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar {
@@ -18,7 +28,8 @@ header{
     justify-content: space-between;
     align-items: center;
     background-color: white;
-    padding: 10px 20px;
+    padding: 10px 50px;
+    margin: 10px;
 }
 
 .logo a {
