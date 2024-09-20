@@ -7,21 +7,17 @@
 body {
     font-family: Arial, sans-serif;
 }
-header{
-    display: block;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-}
-header select{
-    background-color: #333;
-    color: white;
-    border: none;
-}
-.address{
-    display: flex;
-    flex-direction: column;
-}
+
+
+  
+
+
+
+
+
+
+
+
 
 .navbar {
     display: flex;
@@ -30,6 +26,12 @@ header select{
     background-color: white;
     padding: 10px 50px;
     margin: 10px;
+}
+
+
+
+.logo{
+    
 }
 
 .logo a {
@@ -59,6 +61,59 @@ header select{
 .nav-links a:hover {
     color: #007BFF;
 }
+
+
+
+
+
+
+section{
+    display: none;
+}
+
+
+section .list-container {
+    /* border: 2px solid white; */
+    text-align: center;
+    display: inline-block; 
+    position: relative;
+    left: 20px;
+    margin: 8px;
+}
+
+section ul{
+    list-style: none;
+    display: inline-block;
+    margin: 0px 8px 0px 8px;
+    line-height: 2;
+    padding: 8px;
+    text-align: justify;
+}
+
+.list-items{
+    position:relative;
+    bottom:75px;
+}
+
+
+.section-1 .big{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.PRODUCTS:hover ~ .section-1 {
+    display:block;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
