@@ -3,10 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    
 }
 
 body {
     font-family: Arial, sans-serif;
+    
 }
 /* 
 header{
@@ -96,7 +98,7 @@ margin: 10px;
 
 
 
-section{
+.section-1{
     display: none;
 }
 
@@ -153,22 +155,27 @@ section ul{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-.product-card img {
-    max-width: 100%;
+.section-1:hover ~ .products{
+    display: block;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.container{
+    background-color: #fff6d7;
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+}
 
 
 .footer {
