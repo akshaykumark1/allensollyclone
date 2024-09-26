@@ -8,8 +8,10 @@
 
 body {
     font-family: Arial, sans-serif;
+
     
 }
+
 /* 
 header{
     background-color: #333;
@@ -90,7 +92,7 @@ margin: 10px;
 }
 
 .nav-links a:hover {
-    color: #007BFF;
+    color: #ff0000;
 }
 
 
@@ -192,6 +194,175 @@ section ul{
 .button-container{
     text-align: center;
 }
+
+
+
+
+
+
+.image-container-1{
+    position: relative;
+    display: inline-block;
+    
+}
+
+.image-container-1 img{
+    width: 100%;
+    height: auto
+
+
+}
+
+
+.image-container-1 .btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+}
+
+.image-container-1 .btn:hover{
+    background-color: #909fe0;
+}
+
+
+
+
+
+
+
+
+
+.image-container-2{
+    position: relative;
+    display: inline-block;
+    
+}
+
+.image-container-2 img{
+    width: 100%;
+    height: auto
+
+
+}
+
+
+.image-container-2 .btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+}
+
+.image-container-2 .btn:hover{
+    background-color: #c7f57d;
+}
+
+
+
+
+
+.image-container-3{
+    position: relative;
+    display: inline-block;
+    
+}
+
+.image-container-3 img{
+    width: 100%;
+    height: auto
+
+
+}
+
+
+.image-container-3 .btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+}
+
+.image-container-3 .btn:hover{
+    background-color: #76c0e2;
+}
+
+
+.new h1{
+    text-align: center;
+    font-size: 40px;
+    background-color: blue;
+    color:  rgb(255, 255, 0);
+}
+.gender{
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+    background-color: blue;
+}
+.gender a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    background-color: blue;
+    
+}
+
+
+
+.image-blue1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+}
+.image-blue2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+}
+.image-blue3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+    color: white;
+}
+
+
+
+
+
+.footerup{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
 
 
 
