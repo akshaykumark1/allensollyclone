@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allen Solly Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+      <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <style>
+    /* Top bar */
+    .nav1 {
+      background-color: #212121;
+      padding: 5px 15px;
+      color: white;
+      font-size: 12px;
+    }
+
+    .nav1 select,
+    .nav1 a {
+      background-color: transparent;
+      color: white;
+      border: none;
+      text-decoration: none;
+      font-size: 12px;
+    }
+
+    .nav1 img {
+      height: 18px;
+    }
+
+    /* Main navbar */
+    .navbar-custom {
+      background-color: white;
+      padding: 10px 20px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .navbar-custom .nav-link {
+      color: black;
+      font-weight: 500;
+      margin: 0 10px;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: #d40000;
+    }
+
+    .navbar-custom .nav-item img {
+      height: 30px;
+    }
+
+    .navbar-custom .logo {
+      height: 40px;
+    }
+
+    .birlaimg img {
+      height: 25px;
+    }
+
+    .delivery img {
+      height: 25px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar-custom .nav-link {
+        font-size: 11px;
+        margin: 5px 0;
+      }
+
+      .navbar-custom .birlaimg,
+      .navbar-custom .delivery {
+        display: none;
+      }
+
+      .navbar-collapse {
+        flex-direction: column;
+        align-items: start;
+      }
+    }
+
+      .img video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      display: block;
+    }
+
+    .section-1 {
+      padding: 40px 20px;
+      background-color: #f8f8f8;
+    }
+
+    .list-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 20px;
+    }
+
+    .list-container ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .list-container ul li {
+      padding: 5px 0;
+      font-size: 14px;
+      color: #212121;
+    }
+
+    .list-container ul li.big {
+      font-weight: bold;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .menu {
+      padding: 30px 20px;
+      background-color: #212121;
+      color: white;
+      text-align: center;
+    }
+
+    .menu span {
+      display: block;
+      font-size: 14px;
+      margin: 5px 0;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .menu span:hover {
+      color: red;
+    }
+
+    @media (max-width: 576px) {
+      .list-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+      nav.container {
+      background-color: #f8f8f8;
+      padding: 30px 15px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .text h1 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .AppDownload_app_download_code__Nrhhh {
+      display: inline-block;
+      background-color: #212121;
+      color: white;
+      font-weight: bold;
+      padding: 5px 10px;
+      border-radius: 4px;
+      margin-top: 5px;
+    }
+
+    .app-icons img,
+    .allensolly img,
+    .qr-code img {
+      height: 50px;
+    }
+
+    .move {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .move h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .move h5 {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .button-container button {
+      margin: 5px;
+      padding: 8px 16px;
+      border: none;
+      background-color: #212121;
+      color: white;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .image-container-1,
+    .image-container-2,
+    .image-container-3 {
+      position: relative;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .image-container-1 img,
+    .image-container-2 img,
+    .image-container-3 img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .btn {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      color: black;
+      padding: 5px 10px;
+      border: 1px solid #000;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .new {
+      padding: 30px 20px;
+    }
+
+    .new h1 {
+      text-align: center;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .gender {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gender a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #212121;
+      font-weight: 500;
+    }
+
+    .gender a:hover {
+      color: red;
+    }
+
+    .product-card {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .product-card img {
+      width: 100%;
+      height: auto;
+      max-width: 220px;
+    }
+
+    .product-card p {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+
+    .footerup {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 30px 10px;
+      background-color: #212121;
+      color: white;
+      flex-wrap: wrap;
+      gap: 15px;
+      text-align: center;
+    }
+
+    .footerup img {
+      height: 30px;
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      nav.container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footerup {
+        flex-direction: column;
+      }
+
+      .btn {
+        font-size: 10px;
+      }
+    }
+    footer a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <nav class="nav1 d-flex justify-content-between align-items-center flex-wrap">
+    <div class="left d-flex align-items-center gap-2 flex-wrap">
+      <select>
+        <option>MORE BRANDS</option>
+        <option>US POLO</option>
+      </select>
+      <span>Delivery</span>
+      <a href="#" class="link">Add Delivery Address</a>
+    </div>
+
+    <div class="nav_right d-flex align-items-center gap-3 flex-wrap text-white">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>STORES</span>
+
+      <span>
+        <img src="media2/icons8-info-24.png" alt="CONTACT"> CONTACT US
+      </span>
+
+      <span>
+        <img src="media2/icons8-user-24.png" alt="USER"> LOG IN
+      </span>
+    </div>
+  </nav>
+
+  <!-- Main Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img class="logo" src="media/shot3.png" alt="Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-between" id="mainNavbar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 align-items-center">
+          <li class="nav-item"><a class="nav-link" href="https://allensolly.abfrl.in/c/allproducts">Products</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">New Arrivals</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Special Sizes</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://allensolly.abfrl.in/m/men-weddingstore">Wedding Store</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://allensolly.woohoo.in/en-gb/e-gift-cards/allen-solly-egift-card-processing">Gift Card</a></li>
+          <li class="nav-item"><a class="nav-link text-danger" href="#">Sale</a></li>
+        </ul>
+
+        <ul class="navbar-nav align-items-center gap-3">
+          <li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
+          <li class="nav-item delivery"><img src="media/delivery.png" alt="Delivery"></li>
+          <li class="nav-item birlaimg"><img src="media/birla.png" alt="Birla Logo"></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+   <div class="img">
+    <video src="media/vedio.mp4" autoplay muted loop></video>
+  </div>
+
+  <!-- Clothing Categories Section -->
+  <section class="section-1">
+    <div class="list-container">
+      <ul class="list-item-1">
+        <li class="big">MEN</li>
+        <li>Shirts</li>
+        <li>Trousers</li>
+        <li>Jeans</li>
+        <li>Winterwear</li>
+        <li>Suits</li>
+        <li>Blazers</li>
+        <li>Waistcoats</li>
+      </ul>
+
+      <ul class="list-items-2">
+        <li class="big">WOMEN</li>
+        <li>Shirts</li>
+        <li>Trousers</li>
+        <li>Jeans</li>
+        <li>Winterwear</li>
+        <li>Bags</li>
+      </ul>
+
+      <ul class="list-items-3">
+        <li class="big">BOYS</li>
+        <li>Shirts</li>
+        <li>Trousers</li>
+        <li>Jeans</li>
+        <li>Winterwear</li>
+        <li>Belts</li>
+      </ul>
+
+      <ul class="list-items-4">
+        <li class="big">GIRLS</li>
+        <li>Shirts</li>
+        <li>Tops & T-shirts</li>
+        <li>Jeans</li>
+        <li>Winterwear</li>
+        <li>Skirts</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Additional Banner Image -->
+  <div class="text-center">
+    <img src="media2/Screenshot 2024-09-22 145431.png" class="img-fluid" alt="Banner Image">
+  </div>
+
+  <!-- Bottom Menu -->
+  <div class="menu">
+    <span>SALE</span>
+    <span>MEN</span>
+    <span>WOMEN</span>
+    <span>BOYS</span>
+    <span>GIRLS</span>
+    <span>GIFT CARD</span>
+  </div>
+  <!-- App Promo Section -->
+  <nav class="container">
+    <div class="text">
+      <h1>ALLENSOLLY Is now Available on App</h1>
+      <p>Get Flat Rs.500 off on your first purchase. Valid on your first order on <br>Allen Solly app above Rs 2000. T & C apply.</p>
+      <label class="usecode">Use code:</label>
+      <div class="AppDownload_app_download_code__Nrhhh">ASAPP500</div>
+    </div>
+
+    <div class="app-icons d-flex gap-2">
+      <img src="media/app-store_2x.png" alt="App Store">
+      <img src="media/google-play_2x.png" alt="Google Play">
+    </div>
+
+    <div class="allensolly">
+      <img src="media2/AS_Logo_D_259x200.png" alt="Allen Solly Logo">
+    </div>
+
+    <div class="qr-code">
+      <img src="media/Perment QR CODE.png" alt="QR Code">
+    </div>
+  </nav>
+
+  <!-- Collection Intro -->
+  <div class="move">
+    <img src="media/divider_2x.jpeg" class="img-fluid" alt="divider">
+    <h1>DISCOVER OUR ONLINE EXCLUSIVE COLLECTIONS</h1>
+    <h5>Elevate your style: shop the freshest styles from our online exclusive collections</h5>
+  </div>
+
+  <!-- Buttons -->
+  <div class="button-container">
+    <button>IN THE SPOTLIGHT</button>
+    <button>COLOR WAVE</button>
+    <button>CURATED STORES</button>
+  </div>
+
+  <!-- Exclusive Collection Images -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 image-container-1">
+        <img src="media/AS_D_ExColl_Patterns_of_God.jpeg" alt="1">
+        <button class="btn">PATTERNS OF GOD</button>
+      </div>
+      <div class="col-md-4 image-container-2">
+        <img src="media/AS_D_ExColl_24_Shellscape.jpeg" alt="2">
+        <button class="btn">SHELLSCAPE</button>
+      </div>
+      <div class="col-md-4 image-container-3">
+        <img src="media/AS_D_ExColl_24_BOP.jpeg" alt="3">
+        <button class="btn">BIRDS OF PARADISE</button>
+      </div>
+    </div>
+  </div>
+
+  <img src="media/gaps.png" class="img-fluid" alt="gap">
+
+  <!-- Trending Styles -->
+  <nav class="new">
+    <h1>TRENDING STYLES</h1>
+    <div class="gender">
+      <a href="#">ALL</a>
+      <a href="#">MEN</a>
+      <a href="#">WOMEN</a>
+      <a href="#">BOYS</a>
+      <a href="#">GIRLS</a>
+    </div>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4 product-card">
+          <img src="media2/child.avif" alt="">
+          <p><strong>Suits and Blazers</strong></p>
+          <p>Boys navy embroidered <br> regular fit blazer <br> ₹ 999</p>
+        </div>
+        <div class="col-md-4 product-card">
+          <img src="media2/childtroser.webp" alt="">
+          <p><strong>Trousers</strong></p>
+          <p>Classic fit boys trousers <br> all-day comfort <br> ₹ 799</p>
+        </div>
+        <div class="col-md-4 product-card">
+          <img src="media2/childshirt.png" alt="">
+          <p><strong>Shirts</strong></p>
+          <p>Stylish boys cotton shirt <br> with check pattern <br> ₹ 599</p>
+        </div>
+      </div>
+    </div>
+
+    <img src="media/gaps2.png" class="img-fluid" alt="gap2">
+  </nav>
+
+  <!-- Footer Benefits -->
+  <div class="footerup">
+    <div class="footerup-1">
+      <img src="media2/free.png" alt="Free Shipping">
+      <span>FREE SHIPPING</span>
+    </div>
+    <div class="footerup-2">
+      <img src="media2/return.png" alt="Returns">
+      <span>RETURN IN 15 DAYS</span>
+    </div>
+    <div class="footerup-3">
+      <img src="media2/VEHI.png" alt="Express Delivery">
+      <span>EXPRESS DELIVERY IN STORE MODE</span>
+    </div>
+  </div>
+
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start">
+    <div class="row">
+
+      <!-- Brand + Description (Optional) -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+        <h2 class="text-uppercase fw-bold">Allen Solly</h2>
+        <p style="font-size: 0.9rem;">
+          Crafting the unconventional in fashion for Men, Women, Boys, and Girls with timeless elegance and bold innovation.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
+        <h5 class="text-uppercase mb-3">Explore</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Men</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Women</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Boys</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Girls</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Gift Card</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mb-4">
+        <h5 class="text-uppercase mb-3">Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-white text-decoration-none">Shop</a></li>
+          <li><a href="#" class="text-white text-decoration-none">About Us</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Careers</a></li>
+          <li><a href="#" class="text-white text-decoration-none">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4 col-lg-4 col-xl-4 mb-4">
+        <h5 class="text-uppercase mb-3">Contact</h5>
+        <p>Email: <a href="mailto:info@allensolly.com" class="text-white text-decoration-none">info@allensolly.com</a></p>
+        <p>Phone: +1 123-456-7890</p>
+        <h6 class="mt-3">Follow Us</h6>
+        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+      </div>
+
+    </div>
+
+    <!-- Bottom line -->
+    <hr class="bg-light">
+    <div class="text-center pt-3">
+      <p class="mb-0">&copy; 2024 Allen Solly. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+
+</html>
